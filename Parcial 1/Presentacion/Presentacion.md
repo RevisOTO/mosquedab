@@ -1,10 +1,11 @@
 # Presentacion
-Mi nombre es Rafael Mosqueda Barragán estoy en **6º semestre**
+Mi nombre es Rafael Mosqueda Barragán estoy en **6º semestre** con el numero de control 19100223
 en la carrera de **Ingenieria en sistemas computacionales**
 
 Como introduccion a esta materia no tengo mucha idea de como funciona *JavaScript, XML O Php*
 con **HTML** y **CSS** estoy mas familiarizado.
 
+Actualmente no trabajo.
 
 [Mi repositorio](https://github.com/RevisOTO/mosquedab.git)
 
