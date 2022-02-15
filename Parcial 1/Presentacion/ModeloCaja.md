@@ -47,7 +47,7 @@ A menos que decidamos cambiar el tipo de visualización a en línea, elementos c
 encabezados (por ejemplo, < h1 >) y todos los elementos < p > usan por defecto block como 
 tipo de visualización externa.
 
-> ## Si una caja tiene una visualización externa de tipo inline, entonces:
+> # Caja tipo INLINE:
 > - La caja no fuerza ningún salto de línea al llegar al final de la línea.
 > - Las propiedades width y height no se aplican.
 > - Se aplican relleno, margen y bordes verticales, pero no mantienen alejadas otras cajas en línea.
