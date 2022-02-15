@@ -1,5 +1,5 @@
-#Modelo de caja
-##Rafael Mosqueda Barragán		19100223
+# Modelo de caja
+## Rafael Mosqueda Barragán		19100223
 
 El modelo de cajas CSS completo se aplica a cajas que presentan comportamiento en bloque; 
 las cajas con comportamiento en línea solo usan una parte del comportamiento definido en el modelo de cajas.
