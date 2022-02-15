@@ -24,11 +24,11 @@ y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la im
 Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
 
 > .box {
->   width: 350px;
->   height: 150px;
->   margin: 10px;
->   padding: 25px;
->   border: 5px solid black;
+>   width: 350px; <p>
+>   height: 150px;<p>
+>   margin: 10px;<p>
+>   padding: 25px;<p>
+>   border: 5px solid black;<p>
 > }
 
 # Tipos de cajas
@@ -44,10 +44,10 @@ flujo de página y en relación con otras cajas de la página:
 > - El relleno, el margen y el borde mantienen a los otros elementos alejados de la caja.
 
 A menos que decidamos cambiar el tipo de visualización a en línea, elementos como los 
-encabezados (por ejemplo, <h1>) y todos los elementos <p> usan por defecto block como 
+encabezados (por ejemplo, < h1 >) y todos los elementos < p > usan por defecto block como 
 tipo de visualización externa.
 
-> # Si una caja tiene una visualización externa de tipo inline, entonces:
+> ## Si una caja tiene una visualización externa de tipo inline, entonces:
 > - La caja no fuerza ningún salto de línea al llegar al final de la línea.
 > - Las propiedades width y height no se aplican.
 > - Se aplican relleno, margen y bordes verticales, pero no mantienen alejadas otras cajas en línea.
