@@ -1,0 +1,62 @@
+ul.acort,
+ul.acort * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.acort i.icono.derecha {
+    float: right;
+    margin-left: 10px;
+}
+
+body {
+    background-color: #e7dec1
+}
+
+ul.acort {
+    margin: 200px auto;
+    padding: 0;
+    list-style: none;
+    width: 50%;
+    font-size: 18px;
+}
+
+ul.acort li a {
+    display: block;
+    padding: 10px 10px 10px 20px;
+    background: #4b3621;
+    color: #eee;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #666;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+ul.acort li ul {
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+ul.acort li li a {
+    padding: 10px 10px 10px 40px;
+    background: #9b7045;
+    color: #000;
+    font-size: 16px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+ul.acort li:target ul {
+    max-height: 300px;
+    transition: .3s all ease-in;
+}
+
+ul.acort li a:hover {
+    background: rgb(214, 196, 158);
+    color: #fff;
+}
