@@ -1,0 +1,33 @@
+.tabla {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18%;
+}
+
+table {
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 945px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    td {
+        position: relative;
+        padding-left: 20%;
+        border-bottom: 1px solid rgb(0, 0, 0);
+    }
+}
