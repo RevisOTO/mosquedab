@@ -1,10 +1,11 @@
 # Propiedades de Flex Box
-## Rafael Mosqueda Barragán		19100223
+## Rafael Mosqueda Barragán  
+## 19100223
 
 # Propiedades de un contenedor flex
 
 > - ## Propiedad
-> Sintaxis
+> Sintaxis  
 > Descripción
 
 > - ## Display
