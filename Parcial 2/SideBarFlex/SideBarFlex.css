@@ -8,6 +8,10 @@ h1 {
     align-items: center;
 }
 
+.containerFlex {
+    display: flex;
+}
+
 .container {
     background: #191919;
     font-family: Montserrat, sans-serif;
