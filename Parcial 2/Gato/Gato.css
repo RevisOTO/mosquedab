@@ -26,3 +26,13 @@
 #caja1 {
     grid-column: 1 /span 3;
 }
+
+.cajaX {
+    background-size: 90px;
+    background-image: url("https://cdn.pixabay.com/photo/2012/04/12/20/12/x-30465_960_720.png");
+}
+
+.cajaO {
+    background-size: 90px;
+    background-image: url("https://icones.pro/wp-content/uploads/2021/04/icone-cercle-rouge.png");
+}
