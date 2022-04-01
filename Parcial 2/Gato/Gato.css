@@ -36,3 +36,8 @@
     background-size: 90px;
     background-image: url("https://icones.pro/wp-content/uploads/2021/04/icone-cercle-rouge.png");
 }
+
+.button {
+    width: 100px;
+    height: 100px;
+}
