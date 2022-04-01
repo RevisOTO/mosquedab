@@ -64,7 +64,7 @@ h1 {
 }
 
 #st:hover {
-    color: #3f3f55;
+    color: #000000;
 }
 
 #xb:hover {
@@ -89,24 +89,24 @@ nav {
     justify-content: space-around;
     flex-direction: column;
     height: 100vh;
-    background: #422C73;
+    background: #654aa0;
 }
 
 .animON {
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
     margin-left: 0%;
 }
 
 .animOFF {
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
     margin-left: -60px;
 }
 
