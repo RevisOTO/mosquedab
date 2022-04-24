@@ -28,16 +28,12 @@ function Limpiar() {
             document.getElementById(c).classList.remove("cajaX");
         }
     }
-    OO = '';
-    XX = '';
 
     X = [];
     O = [];
     t = true;
 }
 
-var OO = '';
-var XX = '';
 
 
 
@@ -62,86 +58,119 @@ function CheckWin() {
             X.push(index + 1);
         }
     }
-    XX = '';
-    XX = X.join();
-    console.log(XX);
 
-    OO = '';
-    OO = O.join();
-    console.log(OO);
+    var win = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9],
+        [1, 5, 9],
+        [3, 5, 7]
+    ]
 
+    //Circulos
+    for (let i = 0; i < win.length; i++) {
+        for (let j = 0; j < 4; j++) {
+            let winner = win[i];
+            console.log(winner)
+            let Cur = O[j];
 
+            switch (j) {
+                case 0:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra1");
+                        var B1 = true;
+                    }
+                    break;
+                case 1:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra2");
+                        var B2 = true;
+                    }
+                    break;
+                case 2:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra3");
+                        var B3 = true;
+                    }
+                    break;
+                case 3:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra4");
+                        var B4 = true;
+                    }
+                    break;
+            }
+        }
+        //((B1 && B2 && B3) || (B1 && B2 && B4) || (B1 && B3 && B4) || (B2 && B3 && B4))
 
-    switch (OO) {
-        case '1,2,3':
-            confirm("GANAN CIRCULOS");
+        if (B1 && B2 && B3) {
+            B1 = false;
+            B2 = false;
+            B3 = false;
+            B4 = false;
             Limpiar();
-            break;
-        case '4,5,6':
-            confirm("GANAN CIRCULOS");
-            Limpiar();
-            break;
-        case '7,8,9':
-            confirm("GANAN CIRCULOS");
-            Limpiar();
-            break;
-        case '1,4,7':
-            confirm("GANAN CIRCULOS");
-            Limpiar();
-            break;
-        case '2,5,8':
-            confirm("GANAN CIRCULOS");
-            Limpiar();
-            break;
-        case '3,6,9':
-            confirm("GANAN CIRCULOS");
-            Limpiar();
-            break;
-        case '1,5,9':
-            confirm("GANAN CIRCULOS");
-            Limpiar();
-            break;
-        case '3,5,7':
-            confirm("GANAN CIRCULOS");
-            Limpiar();
-            break;
+            document.getElementById("Emer").classList.add("float");
+            document.getElementById("Ok").classList.add("Bok");
+        }
+        B1 = false;
+        B2 = false;
+        B3 = false;
+        B4 = false;
     }
 
-    switch (XX) {
-        case '1,2,3':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-        case '4,5,6':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-        case '7,8,9':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-        case '1,4,7':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-        case '2,5,8':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-        case '3,6,9':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-        case '1,5,9':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-        case '3,5,7':
-            Limpiar();
-            confirm("GANAN LAS EQUIS");
-            break;
-    }
+    //EQUIS
+    for (let i = 0; i < win.length; i++) {
+        for (let j = 0; j < 4; j++) {
+            let winner = win[i];
+            console.log(winner)
+            let Cur = X[j];
 
+            switch (j) {
+                case 0:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra1");
+                        var BX1 = true;
+                    }
+                    break;
+                case 1:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra2");
+                        var BX2 = true;
+                    }
+                    break;
+                case 2:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra3");
+                        var BX3 = true;
+                    }
+                    break;
+                case 3:
+                    if (winner.indexOf(Cur) != -1) {
+                        console.log("Entra4");
+                        var BX4 = true;
+                    }
+                    break;
+            }
+        }
+        //((B1 && B2 && B3) || (B1 && B2 && B4) || (B1 && B3 && B4) || (B2 && B3 && B4))
+
+        if (BX1 && BX2 && BX3) {
+            BX1 = false;
+            BX2 = false;
+            BX3 = false;
+            BX4 = false;
+            Limpiar();
+            document.getElementById("Emer").classList.add("float");
+            document.getElementById("Ok").classList.add("Bok");
+        }
+        BX1 = false;
+        BX2 = false;
+        BX3 = false;
+        BX4 = false;
+    }
     if (X.length + O.length == 9) {
         confirm("EMPATE NADIE GANA");
         Limpiar();
