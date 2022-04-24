@@ -34,8 +34,14 @@ function Limpiar() {
     t = true;
 }
 
+function Close() {
+    document.getElementById("Ok").style.display = "none";
+    document.getElementById("Emer").style.display = "none";
 
+    document.getElementById("Emer").classList.remove("float");
+}
 
+Fwin = false;
 
 function CheckWin() {
     var X = [];
@@ -74,31 +80,26 @@ function CheckWin() {
     for (let i = 0; i < win.length; i++) {
         for (let j = 0; j < 4; j++) {
             let winner = win[i];
-            console.log(winner)
             let Cur = O[j];
 
             switch (j) {
                 case 0:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra1");
                         var B1 = true;
                     }
                     break;
                 case 1:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra2");
                         var B2 = true;
                     }
                     break;
                 case 2:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra3");
                         var B3 = true;
                     }
                     break;
                 case 3:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra4");
                         var B4 = true;
                     }
                     break;
@@ -106,14 +107,28 @@ function CheckWin() {
         }
         //((B1 && B2 && B3) || (B1 && B2 && B4) || (B1 && B3 && B4) || (B2 && B3 && B4))
 
-        if (B1 && B2 && B3) {
+        if ((B1 && B2 && B3) || (B1 && B2 && B4) || (B1 && B3 && B4) || (B2 && B3 && B4)) {
+            if (document.getElementById("Emer").contains(document.getElementById("winmess"))) {
+                document.getElementById("winmess").remove();
+            }
             B1 = false;
             B2 = false;
             B3 = false;
             B4 = false;
+            Fwin = true;
             Limpiar();
+            document.getElementById("Ok").style.display = "block";
+            document.getElementById("Emer").style.display = "block";
+
             document.getElementById("Emer").classList.add("float");
-            document.getElementById("Ok").classList.add("Bok");
+
+
+            let temp = "<a id=\"winmess\"> LOS CIRCULOS GANAN </a>"
+            let a = document.createElement("a");
+            a.innerHTML = temp;
+
+            document.getElementById("Emer").appendChild(a.childNodes[0])
+
         }
         B1 = false;
         B2 = false;
@@ -125,31 +140,26 @@ function CheckWin() {
     for (let i = 0; i < win.length; i++) {
         for (let j = 0; j < 4; j++) {
             let winner = win[i];
-            console.log(winner)
             let Cur = X[j];
 
             switch (j) {
                 case 0:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra1");
                         var BX1 = true;
                     }
                     break;
                 case 1:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra2");
                         var BX2 = true;
                     }
                     break;
                 case 2:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra3");
                         var BX3 = true;
                     }
                     break;
                 case 3:
                     if (winner.indexOf(Cur) != -1) {
-                        console.log("Entra4");
                         var BX4 = true;
                     }
                     break;
@@ -157,22 +167,54 @@ function CheckWin() {
         }
         //((B1 && B2 && B3) || (B1 && B2 && B4) || (B1 && B3 && B4) || (B2 && B3 && B4))
 
-        if (BX1 && BX2 && BX3) {
+        if ((BX1 && BX2 && BX3) || (BX1 && BX2 && BX4) || (BX1 && BX3 && BX4) || (BX2 && BX3 && BX4)) {
+            if (document.getElementById("Emer").contains(document.getElementById("winmess"))) {
+                document.getElementById("winmess").remove();
+            }
             BX1 = false;
             BX2 = false;
             BX3 = false;
             BX4 = false;
+            Fwin = true;
             Limpiar();
+            document.getElementById("Ok").style.display = "block";
+            document.getElementById("Emer").style.display = "block";
+
             document.getElementById("Emer").classList.add("float");
-            document.getElementById("Ok").classList.add("Bok");
+
+
+            let temp = "<a id=\"winmess\"> LAS EQUIS GANAN </a>"
+            let a = document.createElement("a");
+            a.innerHTML = temp;
+
+            document.getElementById("Emer").appendChild(a.childNodes[0])
         }
         BX1 = false;
         BX2 = false;
         BX3 = false;
         BX4 = false;
     }
-    if (X.length + O.length == 9) {
-        confirm("EMPATE NADIE GANA");
+
+    console.log(Fwin);
+    //EMPATE
+    if (X.length + O.length == 9 && !Fwin) {
+        if (document.getElementById("Emer").contains(document.getElementById("winmess"))) {
+            document.getElementById("winmess").remove();
+        }
+
+
+        document.getElementById("Ok").style.display = "block";
+        document.getElementById("Emer").style.display = "block";
+
+        document.getElementById("Emer").classList.add("float");
+
+
+        let temp = "<a id=\"winmess\"> EMPATE NADIE GANA </a>"
+        let a = document.createElement("a");
+        a.innerHTML = temp;
+
+        document.getElementById("Emer").appendChild(a.childNodes[0])
         Limpiar();
+        Fwin = false;
     }
 }

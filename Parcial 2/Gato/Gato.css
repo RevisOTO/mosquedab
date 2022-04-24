@@ -47,7 +47,7 @@
         opacity: 0%;
     }
     to {
-        opacity: 60%;
+        opacity: 100%;
     }
 }
 
@@ -55,20 +55,32 @@
     position: fixed;
     width: 400px;
     height: 400px;
-    opacity: 60%;
-    margin-left: 37%;
-    margin-top: 8%;
-    background-color: rgb(133, 133, 133);
-    animation: fadein 1s;
+    margin-left: 39.7%;
+    margin-top: 10%;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0def4809-65d0-42fd-8d39-f15f8468f8f6/d6kgcxo-03a6835b-3f17-4ae8-a3a0-0405cdced12f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBkZWY0ODA5LTY1ZDAtNDJmZC04ZDM5LWYxNWY4NDY4ZjhmNlwvZDZrZ2N4by0wM2E2ODM1Yi0zZjE3LTRhZTgtYTNhMC0wNDA1Y2RjZWQxMmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uAohgEfMiz8ub20EY9F5N78rFI7gzLIJWti-fxjnEE0);
+    animation: fadein 2s;
 }
 
 .Bok {
-    display: block;
     width: 100px;
     height: 50px;
     position: fixed;
     margin-top: 320px;
     margin-left: 150px;
+    background-color: rgba(240, 248, 255, 0);
+    border: 1px;
+}
+
+#Ok:hover {
+    background-color: rgb(199, 199, 199);
+}
+
+#winmess {
+    position: fixed;
+    font-family: Impact;
+    font-size: 29px;
+    padding-left: 102px;
+    padding-top: 120px;
 }
 
 #Ok {
