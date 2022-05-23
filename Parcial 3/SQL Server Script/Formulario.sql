@@ -1,7 +1,7 @@
-CREATE DATABASE FORM;
-use FORM;
+CREATE DATABASE L19100223;
+use L19100223;
 
-DROP TABLE Formulario;
+
 
 CREATE TABLE Formulario(
     NombreCompleto VARCHAR(255),
@@ -12,6 +12,7 @@ CREATE TABLE Formulario(
     CP VARCHAR(5),
     CURP VARCHAR(255)
 );
+
 
 INSERT INTO Formulario (NombreCompleto,Fecha_Nac,Celular,Estado,Ciudad,CP,CURP)
 VALUES 
@@ -24,3 +25,4 @@ VALUES
 
 SELECT *
 FROM Formulario;
+DROP TABLE Formulario;
