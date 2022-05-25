@@ -4,15 +4,16 @@ use L19100223;
 
 
 CREATE TABLE Formulario(
+    idPersona INT NOT NULL AUTO_INCREMENT,
     NombreCompleto VARCHAR(255),
     Fecha_Nac DATE,
     Celular VARCHAR(14),
     Estado VARCHAR(255),
     Ciudad VARCHAR(255),
     CP VARCHAR(5),
-    CURP VARCHAR(255)
+    CURP VARCHAR(255),
+    PRIMARY KEY (idPersona)
 );
-
 
 INSERT INTO Formulario (NombreCompleto,Fecha_Nac,Celular,Estado,Ciudad,CP,CURP)
 VALUES 

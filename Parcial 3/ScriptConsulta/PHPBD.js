@@ -15,8 +15,8 @@ $(document).ready(function() {
     $('#fetch').ready(function() {
         document.getElementById("fetch").addEventListener("click", function() {
 
-            let promesa = fetch('Ajax.php');
-            promesa.then(respuesta)
+            let promesa = fetch('PHPBD.php');
+            promesa.then((respuesta) => console.log(respuesta.json()))
                 .then(data => {
                     console.log(respuesta);
                 });
