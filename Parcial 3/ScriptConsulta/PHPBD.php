@@ -4,5 +4,5 @@
         $rows = $mbd->prepare($consulta);
         $rows -> execute();
         $res = $rows->fetch(pdo::FETCH_ASSOC);
-        echo print json_encode($res);
+        echo json_encode($res);
 ?>
