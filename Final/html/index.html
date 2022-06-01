@@ -67,9 +67,25 @@
                     <input id="curp" type="text" class="form-control" placeholder="CURP">
                 </div>
             </div>
+
             <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" id="btnagregar">
+                Agregar
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" id="btnnuevo">
+                Nuevo
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" id="btneliminar">
+                Eliminar
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" id="btnmod">
+                Modificar
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" id="btnlimp">
+                Limpiar
+            </button>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalreload">
-                Actualizar
+                Consultar
             </button>
         </form>
     </div>
@@ -86,13 +102,13 @@
           </button>
                 </div>
                 <div class="modal-body">
-                    Inserte el id deseado:
+                    Inserte el id deseado que quiere consultar:
                     <br>
                     <input type="textbox" id="consulta">
                     <br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="actualizar">Actualizar</button>
+                    <button type="button" class="btn btn-primary" id="btnconsultar">Consultar</button>
                 </div>
             </div>
         </div>

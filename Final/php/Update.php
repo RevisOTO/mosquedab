@@ -1,7 +1,8 @@
 <?php
         $idvar = $_POST['idcons'];
 
-        $mbd = new PDO('mysql:host=localhost;dbname=L19100223', 'root', '');
+        $mbd = new PDO('mysql:host=localhost;dbname=L19100223', 'root', '');  
+
         $consulta = 'SELECT * from Formulario where idPersona = '.$idvar;
         $rows = $mbd->prepare($consulta);
         $rows -> execute();
