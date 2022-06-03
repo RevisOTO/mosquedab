@@ -12,7 +12,7 @@ try{
 
 $sql = "UPDATE formulario
 SET NombreCompleto = '$obj->NombreCompleto', Fecha_Nac = '$obj->Fecha_Nac', Celular = '$obj->Celular', Estado = '$obj->Estado', Ciudad = '$obj->Ciudad', CP = '$obj->CP', CURP = '$obj->CURP'
-WHERE NombreCompleto = '" . $nom . "';";
+WHERE idPersona = " . $nom . ";";
     
 $consultaM = $con -> prepare($sql);
 $consultaM -> execute();

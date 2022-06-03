@@ -29,8 +29,10 @@ window.onload = function() {
             console.log(refrescar(data));
         }, 'json');
     });
+    var ID;
 
     function refrescar(data) {
+        ID = data.idPersona;
         $('#nomcomp').val(data.NombreCompleto);
         $('#fechanac').val(data.Fecha_Nac);
         $('#celular').val(data.Celular);
@@ -87,6 +89,7 @@ window.onload = function() {
 
     $('#btneliminar').click(function() {
         nomcomp = $('#nomcomp').val();
+        ID = null;
         $.post('../php/Eliminar.php', { nom: nomcomp }, function(data) {
             console.log(data);
         }, );
@@ -122,7 +125,7 @@ window.onload = function() {
 
             objjsonm = '{"NombreCompleto":"' + nomcomp + '", "Fecha_Nac":"' + fechanac + '", "Celular":"' + celular + '", "Estado":"' + estado + '", "Ciudad":"' + ciudad + '", "CP":"' + cp + '", "CURP":"' + curp + '"}';
 
-            $.post('../php/Modificar.php', { json: objjsonm, nom: nomcomp }, function(data) {
+            $.post('../php/Modificar.php', { json: objjsonm, nom: ID }, function(data) {
                 console.log(data);
             }, );
         } else {
