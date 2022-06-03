@@ -6,7 +6,7 @@ use L19100223;
 CREATE TABLE Formulario(
     idPersona INT NOT NULL AUTO_INCREMENT,
     NombreCompleto VARCHAR(255),
-    Fecha_Nac DATE,
+    Fecha_Nac VARCHAR(14),
     Celular VARCHAR(14),
     Estado VARCHAR(255),
     Ciudad VARCHAR(255),

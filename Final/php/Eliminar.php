@@ -1,6 +1,6 @@
 <?php
 
-$obj = json_decode($_POST["json"], false);
+$nom = $_POST["nom"];
 
 try{
     $con = new PDO('mysql:host=localhost;dbname=L19100223', 'root', '');
@@ -9,7 +9,7 @@ try{
     exit();
 } 
 
-$sql = "INSERT INTO formulario (NombreCompleto, Fecha_Nac, Celular, Estado, Ciudad, CP, CURP) VALUES (\"$obj->NombreCompleto\", \"$obj->Fecha_Nac\", \"$obj->Celular\", \"$obj->Estado\", \"$obj->Ciudad\", \"$obj->CP\",\"$obj->CURP\")";
+$sql = "DELETE FROM formulario WHERE NombreCompleto = '".$nom."'";
     
 $consultaA = $con -> prepare($sql);
 $consultaA -> execute();
