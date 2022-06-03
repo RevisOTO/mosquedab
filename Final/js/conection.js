@@ -64,7 +64,7 @@ window.onload = function() {
 
             $.post('../php/Agregar.php', { json: objjson }, function(data) {
                 console.log(data);
-            }, );
+            });
         } else {
             swal("Falta de rellenar campos");
         }
