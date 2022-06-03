@@ -94,13 +94,13 @@ window.onload = function() {
             console.log(data);
         }, );
 
-        $('#nomcomp').val() = '';
-        $('#fechanac').val() = '';
-        $('#celular').val() = '';
-        $('#estado').val() = '';
-        $('#ciudad').val() = '';
-        $('#cp').val() = '';
-        $('#curp').val() = '';
+        $('#nomcomp').val("");
+        $('#fechanac').val("");
+        $('#celular').val("");
+        $('#estado').val("");
+        $('#ciudad').val("");
+        $('#cp').val("");
+        $('#curp').val("");
 
         $('#nomcomp').attr("disabled", "disabled");
         $('#fechanac').attr("disabled", "disabled");
